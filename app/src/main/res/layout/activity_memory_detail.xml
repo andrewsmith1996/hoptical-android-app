@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DiscoverBeerDetail">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/top_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:elevation="4dp"
+            app:theme="@style/ToolBarStyle" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+                android:layout_margin="8dp">
+
+
+                <TextView
+                    android:id="@+id/beerMemoryTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/default_beer_title"
+                    android:textAppearance="@android:style/TextAppearance.Material.Large" />
+
+                <TextView
+                    android:id="@+id/beerBreweryTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/default_brewery"
+                    android:layout_marginBottom="8dp"
+                    />
+
+                <TextView
+                    android:id="@+id/beerDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/beer_memory_date" />
+
+                <TextView
+                    android:id="@+id/beerMemoryDrinkingBuddy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/default_drinking_buddy"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:id="@+id/beerMemoryLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    tools:text="@string/default_location_text" />
+
+                <ImageView
+                    android:id="@+id/beerMemoryImageView"
+                    android:layout_width="match_parent"
+                    app:srcCompat="@drawable/beer_outline"
+                    android:layout_marginBottom="8dp"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"/>
+
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/default_review_title"
+                    android:textAppearance="@android:style/TextAppearance.Material.Large" />
+
+                <TextView
+                    android:id="@+id/beerMemoryNotes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_marginBottom="16dp"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
